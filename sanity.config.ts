@@ -8,14 +8,17 @@ import { deskTool } from 'sanity/desk'
 
 // see https://www.sanity.io/docs/api-versioning for how versioning works
 import { apiVersion, dataset, projectId } from './sanity/env'
-import { schema } from './sanity/schema'
+import project from './sanity/schemas/project'
 
 export default defineConfig({
-  basePath: '/studio',
+  title: "Age Era website",
+  basePath: '/studio', // <-- important that `basePath` matches the route you're mounting your studio from, it applies to both `/pages` and `/app`
   projectId,
   dataset,
   //edit schemas in './sanity/schema'
-  schema,
+  schema: {
+    types: [project]
+  },
   plugins: [
     deskTool(),
     // Vision lets you query your content with GROQ in the studio

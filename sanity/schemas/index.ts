@@ -1,4 +1,4 @@
-import page from './page'
+import page from './project'
 
 export const schemaTypes = [
     page
