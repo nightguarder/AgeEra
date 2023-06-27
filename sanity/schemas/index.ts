@@ -1,7 +1,7 @@
-import page from './project'
+import project from './project';
 
-export const schemaTypes = [
-    page
+export const schemaObjects = [
+    project
 ]
 //You are exporting default Javascript(Ts) Objects
-export default schemaTypes;
+export default schemaObjects;

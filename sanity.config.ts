@@ -8,7 +8,7 @@ import { deskTool } from 'sanity/desk'
 
 // see https://www.sanity.io/docs/api-versioning for how versioning works
 import { apiVersion, dataset, projectId } from './sanity/env'
-import project from './sanity/schemas/project'
+import schemaObjects from './sanity/schemas/index'
 
 export default defineConfig({
   title: "Age Era website",
@@ -17,7 +17,7 @@ export default defineConfig({
   dataset,
   //edit schemas in './sanity/schema'
   schema: {
-    types: [project]
+    types: schemaObjects
   },
   plugins: [
     deskTool(),
