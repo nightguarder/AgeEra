@@ -42,7 +42,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-
+next-env.d.ts
 # Env files created by scripts for working locally
 .env
 studio/.env.development
