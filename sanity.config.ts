@@ -5,10 +5,11 @@
 import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
+import * as Icon from 'react-feather' 
 
 // see https://www.sanity.io/docs/api-versioning for how versioning works
 import { apiVersion, dataset, projectId } from './sanity/env'
-import schemaObjects from './sanity/schemas/index'
+import {schemaObjects} from './sanity/schemas/index'
 
 export default defineConfig({
   title: "Age Era website",
@@ -17,7 +18,7 @@ export default defineConfig({
   dataset,
   //edit schemas in './sanity/schema'
   schema: {
-    types: schemaObjects
+    types: schemaObjects,
   },
   plugins: [
     deskTool(),

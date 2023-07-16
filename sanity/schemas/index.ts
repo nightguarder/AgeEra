@@ -1,7 +1,13 @@
-import project from './project';
+import page from './documents/page';
+import { product } from './documents/product';
 
-export const schemaObjects = [
-    project
+const schemaSingletons = [
+    
 ]
+const  schemaDocuments = [
+    product,
+    page
+]
+//Keep track of your exported schemas! 
 //You are exporting default Javascript(Ts) Objects
-export default schemaObjects;
+export const  schemaObjects = [...schemaSingletons,...schemaDocuments];
