@@ -27,6 +27,7 @@
     "react-feather": "^2.0.10",
     "react-hot-toast": "^2.4.1",
     "sanity": "^3.13.0",
+    "slug": "^8.2.2",
     "stripe": "^12.10.0",
     "styled-components": "^5.3.6"
   },

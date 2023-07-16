@@ -23,11 +23,18 @@ export const product = defineType({
           type: 'object',
           name: 'tag',
           fields: [
+            {name:'companyName', type: 'reference',to: [{type:'brand'}]},
             {type: 'string', name: 'label'},
             {type: 'string', name: 'value'},
           ]
         })
       ]
+    }),
+    defineField({
+        name: "description",
+        title: "Description",
+        rows: 4,
+        type: "text",
     }),
     defineField(
         {
@@ -50,4 +57,10 @@ export const product = defineType({
         },
     )
   ],
+  preview: {
+    select: {
+      title: 'Product',
+      subtitle: 'productName'
+    }
+  }
 })
