@@ -1,4 +1,4 @@
-import page from './documents/page';
+import { page } from './documents/page';
 import { product } from './documents/product';
 
 const schemaSingletons = [

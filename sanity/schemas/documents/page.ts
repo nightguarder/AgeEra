@@ -1,27 +1,11 @@
-import {defineField} from 'sanity'
-
+import {defineField, defineType} from 'sanity'
 import { Paperclip } from 'react-feather'
 
-export default defineField({
+export const page = defineType({
   name: 'page',
   title: 'Page',
   type: 'document',
   icon: Paperclip,
-  groups: [
-    {
-      name: 'theme',
-      title: 'Theme',
-    },
-    {
-      default: true,
-      name: 'editorial',
-      title: 'Editorial',
-    },
-    {
-      name: 'seo',
-      title: 'SEO',
-    },
-  ],
   fields: [
     // Title
     defineField({
@@ -30,60 +14,12 @@ export default defineField({
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
-    
-    // Color theme
-    defineField({
-      name: 'colorTheme',
-      title: 'Color theme',
-      type: 'reference',
-      to: [{type: 'colorTheme'}],
-      group: 'theme',
-    }),
-    // Show hero
-    defineField({
-      name: 'showHero',
-      title: 'Show hero',
-      type: 'boolean',
-      description: 'If disabled, page title will be displayed instead',
-      initialValue: false,
-      group: 'editorial',
-    }),
-    // Hero
-    defineField({
-      name: 'hero',
-      title: 'Hero',
-      type: 'hero.page',
-      hidden: ({document}) => !document?.showHero,
-      group: 'editorial',
-    }),
-    // Body
+    /* // Body
     defineField({
       name: 'body',
       title: 'Body',
-      type: 'body',
+      type: 'body', //??A custom object? 
       group: 'editorial',
-    }),
-    // SEO
-    defineField({
-      name: 'seo',
-      title: 'SEO',
-      type: 'seo.page',
-      group: 'seo',
-    }),
-  ],
-  preview: {
-    select: {
-      active: 'active',
-      seoImage: 'seo.image',
-      title: 'title',
-    },
-    prepare(selection) {
-      const {seoImage, title} = selection
-
-      return {
-        media: seoImage,
-        title,
-      }
-    },
-  },
+    }), */
+  ]
 })
